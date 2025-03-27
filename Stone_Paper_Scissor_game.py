@@ -1,4 +1,4 @@
-    # This is a simple Stone-Paper-Scissors game
+# This is a simple Stone-Paper-Scissors game
 import random
 a=input("Entre your choice (stone/paper/scissor): ") # The user inputs their choice
 b=random.choice(["stone","paper","scissor"]) # The computer randomly selects its choice
