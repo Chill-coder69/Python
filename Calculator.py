@@ -8,13 +8,13 @@ if operation not in ["+","-","*","/"]:
     exit()
 
 # first number
-first_no=int(input("enter first no. : "))
+first_no=c=int(input("enter first no. : "))
 
 # second number
-sec_no=int(input("enter second no. : "))
+sec_no=b=int(input("enter second no. : "))
 
 # results
 result= {"/": c/b ,'*':c*b , "+":c+b , "-" : c-b}
 
 # give output
-print(f"{first_no} {operation} {sec_no} is {result[operation]}")
+print(f"{first_no} {operation} {sec_no} = {result[operation]}")
