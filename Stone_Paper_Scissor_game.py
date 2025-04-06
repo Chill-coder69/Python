@@ -1,28 +1,26 @@
 # This is a simple Stone-Paper-Scissors game
 import random
 
-# The user inputs their choice
-a=input("Entre your choice (stone/paper/scissor): ")
+# User input with cleanup
+a = input("Enter your choice (stone/paper/scissor): ").strip().lower()
 
-# The computer randomly selects its choice
-b=random.choice(["stone","paper","scissor"]) 
+# Validate input
+if a not in ["stone", "paper", "scissor"]:
+    print("Invalid input. Please choose stone, paper, or scissor.")
+    exit()
 
-# print both the choices
-print(f"computer choice: {b} \n your choice: {a}")
+# Computer's random choice
+b = random.choice(["stone", "paper", "scissor"]) 
 
-# The game determines the winner based on standard rules:
+# Display choices
+print(f"Computer choice: {b} \nYour choice: {a}")
 
-# - Same choices result in a tie
-if a==b:
-    print("tie")
-# - Stone beats Scissors
-elif a=="stone" and b=="scissor": 
-    print("you win")
-# - Paper beats Stone
-elif a=="paper" and b=="stone":
-    print("you win")
-# - Scissors beats Paper
-elif a=="scissor" and b=="paper":
-    print("you win")
+# Determine winner
+if a == b:
+    print("It's a tie!")
+elif (a == "stone" and b == "scissor") or \
+     (a == "paper" and b == "stone") or \
+     (a == "scissor" and b == "paper"):
+    print("You win!")
 else:
-    print("you lose")
+    print("You lose!")
