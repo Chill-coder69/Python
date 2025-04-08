@@ -5,7 +5,7 @@ key = F.generate_key()
 ft = F(key)
 def e():
     for file in files :
-        if file != "secret.key" and file != "File_Encryption_and_Decryption.py":
+        if file != "secret.key" and file != "File_encryptor_decryptor_for_whole_directory.py":
             with open(file , "rb") as f:
                 File_content = f.read()
             Encrypted_text = ft.encrypt(File_content)
