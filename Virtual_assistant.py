@@ -50,10 +50,8 @@ def processCommand(c):
     elif (c.lower() == "exit"):
             speak("Thanks for using Jarvis , Have a good day " , "Exiting")
     else:
-        GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
-        genai.configure(api_key="YOU'R API") 
-        model = genai.GenerativeModel('gemini-2.0-flash')
-        response = model.generate_content(f"Answer this in paragraph at least 70 words : {c}")
+        client = genai.Client(api_key = "your api" )
+        response = client.models.generate_content( model="gemini-3-flash-preview", contents= f"Answer this in paragraph at least 70 words : {c}")
         print(response.text)
         speak(response.text)
 if __name__ == "__main__":
