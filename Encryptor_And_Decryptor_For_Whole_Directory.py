@@ -3,6 +3,9 @@ import os
 files = list(os.listdir())
 key = F.generate_key()
 ft = F(key)
+# Note : This program will encrypt or decrypt all the files which is in the same directory as this file itself
+# Note : Don't delete the secret.key file. if you did then the file you encrypt will not ve able to decrypt
+
 def e():
     for file in files :
         if file != "secret.key" and file != "File_encryptor_decryptor_for_whole_directory.py":
