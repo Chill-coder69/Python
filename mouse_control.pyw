@@ -1,9 +1,8 @@
 """
 Control the mouse from the numeric keypad.
 
-Run it, then press the Del key on the numeric keypad (it types "." while
-NumLock is ON) to switch mouse control ON / OFF.
-Press F8 to quit.  Keep NumLock ON.
+Run it, then press the Del key on the numeric keypad to switch mouse control ON / OFF.
+Press F8 to quit.
 
 A small circle in the top-right corner of the screen shows the state:
 RED = control is OFF, GREEN = control is ON (both the border and the tint change).
